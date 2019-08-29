@@ -1,0 +1,386 @@
+\usepackage{amsmath,amstext,amssymb,amsfonts}
+\usepackage{color,graphicx}
+\usepackage{tabularx}
+\usepackage{verbatim}
+
+% theorem environments
+\usepackage{amsthm}
+\usepackage{ifdraft}
+
+
+%\usepackage[color]{showkeys}
+
+\usepackage{nicefrac}
+
+% write fractions using \frac, \tfrac, \nfrac, or \ffrac (avoid ffrac)
+\newcommand{\flatfrac}[2]{#1/#2}
+\newcommand{\ffrac}{\flatfrac}
+\newcommand{\nfrac}{\nicefrac}
+
+\usepackage{microtype}
+
+\newtheorem{theorem}{Theorem}[section]
+
+\newtheorem{Claim}[theorem]{Claim}
+\newtheorem{subclaim}{Claim}[theorem]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem*{hypothesis*}{Hypothesis}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{SDP}[theorem]{SDP}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{protocol}[theorem]{Protocol}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{assumption}[theorem]{Assumption}
+
+
+
+\usepackage{prettyref}
+\newcommand{\savehyperref}[2]{\texorpdfstring{\hyperref[#1]{#2}}{#2}}
+
+\newrefformat{eq}{\savehyperref{#1}{\textup{(\ref*{#1})}}}
+\newrefformat{lem}{\savehyperref{#1}{Lemma~\ref*{#1}}}
+\newrefformat{def}{\savehyperref{#1}{Definition~\ref*{#1}}}
+\newrefformat{thm}{\savehyperref{#1}{Theorem~\ref*{#1}}}
+\newrefformat{cor}{\savehyperref{#1}{Corollary~\ref*{#1}}}
+\newrefformat{cha}{\savehyperref{#1}{Chapter~\ref*{#1}}}
+\newrefformat{sec}{\savehyperref{#1}{Section~\ref*{#1}}}
+\newrefformat{app}{\savehyperref{#1}{Appendix~\ref*{#1}}}
+\newrefformat{tab}{\savehyperref{#1}{Table~\ref*{#1}}}
+\newrefformat{fig}{\savehyperref{#1}{Figure~\ref*{#1}}}
+\newrefformat{hyp}{\savehyperref{#1}{Hypothesis~\ref*{#1}}}
+\newrefformat{alg}{\savehyperref{#1}{Algorithm~\ref*{#1}}}
+\newrefformat{sdp}{\savehyperref{#1}{SDP~\ref*{#1}}}
+\newrefformat{rem}{\savehyperref{#1}{Remark~\ref*{#1}}}
+\newrefformat{item}{\savehyperref{#1}{Item~\ref*{#1}}}
+\newrefformat{step}{\savehyperref{#1}{step~\ref*{#1}}}
+\newrefformat{conj}{\savehyperref{#1}{Conjecture~\ref*{#1}}}
+\newrefformat{fact}{\savehyperref{#1}{Fact~\ref*{#1}}}
+\newrefformat{prop}{\savehyperref{#1}{Proposition~\ref*{#1}}}
+\newrefformat{claim}{\savehyperref{#1}{Claim~\ref*{#1}}}
+\newrefformat{relax}{\savehyperref{#1}{Relaxation~\ref*{#1}}}
+\newrefformat{red}{\savehyperref{#1}{Reduction~\ref*{#1}}}
+\newrefformat{part}{\savehyperref{#1}{Part~\ref*{#1}}}
+\newrefformat{prob}{\savehyperref{#1}{Problem~\ref*{#1}}}
+\newrefformat{ass}{\savehyperref{#1}{Assumption~\ref*{#1}}}
+
+
+
+% {{{ sref }}}
+
+% short section reference
+\newcommand{\Sref}[1]{\hyperref[#1]{\S\ref*{#1}}}
+
+
+% nicer times font - saves pages
+\usepackage[varg]{txfonts}
+%\usepackage{times}
+
+% nice mathbb fonts
+\renewcommand{\mathbb}{\varmathbb}
+
+% switch to fullpage for final version
+% \ifoptionfinal{
+ %  \usepackage{fullpage}
+ %}
+
+% slanted inequality signs
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+
+% shows keys of labels, references, and citations
+%\usepackage[color]{showkeys}
+
+% bold math package - provides command to use boldmath font
+\usepackage{bm}
+
+% to define text macros
+\usepackage{xspace}
+
+% load hyperref
+\usepackage[pdftex,pagebackref,colorlinks,linkcolor=blue,filecolor = blue, citecolor = blue, urlcolor  = blue]{hyperref}
+
+% \usepackage[top=2cm, bottom=2cm, left=1.6cm, right=1.6cm]{geometry}
+
+
+% {{{ boxedminipage }}}
+\usepackage{boxedminipage}
+
+\newenvironment{mybox}
+{\center \noindent\begin{boxedminipage}{1.0\linewidth}}
+{\end{boxedminipage}
+\noindent
+}
+
+
+% punctation at the end of displayed formulas
+\newcommand{\mper}{\,.}
+\newcommand{\mcom}{\,,}
+
+
+% boldface vectors
+\renewcommand{\vec}[1]{{\bm{#1}}}
+
+% prime/tilde vector
+\newcommand{\pvec}[1]{\vec{#1}'}
+\newcommand{\ppvec}[1]{\vec{#1}''}
+\newcommand{\tvec}[1]{{\tilde{\vec{#1}}}}
+
+% parentheses
+\newcommand{\paren}[1]{\left(#1 \right )}
+\newcommand{\Paren}[1]{\left(#1 \right )}
+
+% brackets
+\newcommand{\brac}[1]{[#1 ]}
+\newcommand{\Brac}[1]{\left[#1\right]}
+
+% set braces
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\Set}[1]{\left\{#1\right\}}
+
+
+% absolute value sign
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\Abs}[1]{\left\lvert#1\right\rvert}
+
+% ceil floor
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+
+% norm
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\Norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\fnorm}[1]{\norm{#1}_F}
+
+
+% define symbol for definition
+\newcommand{\defeq}{\stackrel{\textup{def}}{=}}
+\newcommand{\iseq}{\stackrel{\textup{?}}{=}}
+\newcommand{\isgeq}{\stackrel{\textup{?}}{\geq}}
+\newcommand{\isleq}{\stackrel{\textup{?}}{\leq}}
+% big vertical space
+\newcommand{\vbig}{\vphantom{\bigoplus}}
+
+% linear algebra
+\newcommand{\inprod}[1]{\left\langle #1\right\rangle}
+
+% norm
+\newcommand{\snorm}[1]{\norm{#1}^2}
+
+% L2 norm
+\newcommand{\normt}[1]{\norm{#1}_{\scriptstyle 2}}
+\newcommand{\snormt}[1]{\norm{#1}^2_2}
+
+% Projection Operators
+\newcommand{\projsymb}{\Pi}
+\newcommand{\proj}[2]{\projsymb_{#1}\paren{#2}}
+\newcommand{\projperp}[2]{\projsymb_{#1}^{\perp}\paren{#2}}
+\newcommand{\projpar}[2]{\projsymb_{#1}^{\parallel}\paren{#2}}
+
+% norms
+\newcommand{\normo}[1]{\norm{#1}_{\scriptstyle 1}}
+\newcommand{\normi}[1]{\norm{#1}_{\scriptstyle \infty}}
+\newcommand{\normb}[1]{\norm{#1}_{\scriptstyle \square}}
+
+% number sets
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\N}{{\mathbb Z}_{\geq 0}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Rnn}{\R_+}
+
+
+% common operators
+\newcommand{\Inf}{\ensuremath{\sf{Inf}}}
+\newcommand{\sdp}{{\sf SDP }}
+\newcommand{\las}{\ensuremath{\sf{Lasserre}}}
+\newcommand{\qp}{\mathrm{qp}}
+\newcommand{\opt}{{\sf OPT}}
+\newcommand{\OPT}{{\sf OPT}}
+\newcommand{\lp}{{\sf LP}}
+\newcommand{\LP}{{\sf LP}}
+\newcommand{\val}{{\sf VAL}}
+\newcommand{\cost}{{\sf cost}}
+\newcommand{\csp}{{\sf CSP}}
+\newcommand{\sse}{{\sf SSE}}
+
+\newcommand{\seteq}{\mathrel{\mathop:}=}
+\newcommand{\subjectto}{\text{subject to}}
+\newcommand{\card}{\abs}
+\newcommand{\Card}{\Abs}
+\newcommand{\half}{\nfrac{1}{2}}
+
+
+
+
+
+% probability symbols
+\newcommand{\Esymb}{\mathbb{E}}
+\newcommand{\Psymb}{\mathbb{P}}
+\newcommand{\Vsymb}{\mathbb{V}}
+\newcommand{\Isymb}{\mathbb{I}}
+\DeclareMathOperator*{\E}{\Esymb}
+\DeclareMathOperator*{\Var}{{\sf Var}}
+\DeclareMathOperator*{\ProbOp}{\Psymb}
+\newcommand{\var}[1]{\Var \left[#1\right]}
+
+%conditioning 
+\newcommand{\given}{\mathrel{}\middle|\mathrel{}}
+\newcommand{\Given}{\given}
+
+% probability of an event \prob{e}=IP{e}
+\newcommand{\prob}[1]{\ProbOp\Brac{#1}}
+\newcommand{\Prob}[1]{\ProbOp\Brac{#1}}
+
+% expectation of variable \ex{X} = IE[X]
+\newcommand{\ex}[1]{\E\brac{#1}}
+\newcommand{\Ex}[1]{\E\Brac{#1}}
+
+\renewcommand{\Pr}[1]{\ProbOp\Brac{#1}}
+\newcommand{\pr}[2]{\ProbOp_{#1}\Brac{#2}}
+
+
+\newcommand{\ind}[2]{\Isymb_{#1}\brac{#2}}
+\newcommand{\Ind}[1]{\Isymb\Brac{#1}}
+
+\newcommand{\varex}[1]{\E\paren{#1}}
+\newcommand{\varEx}[1]{\E\Paren{#1}}
+\newcommand{\eset}{\emptyset}
+\newcommand{\e}{\epsilon}
+
+% superscript with parentheses
+\newcommand{\super}[2]{#1^{\paren{#2}}}
+
+% bits
+\newcommand{\bits}{\{0,1\}}
+
+
+% author notes macros
+\definecolor{DSgray}{cmyk}{0,0,0,0.7}
+\newcommand{\Authornote}[2]{{\small\textcolor{red}{\sf$<<<${  #1: #2 }$>>>$}}}
+\newcommand{\Authormarginnote}[2]{\marginpar{\parbox{2cm}{\raggedright\tiny \textcolor{DSgray}{#1: #2}}}}
+
+% disable author notes when final option is present
+%\ifoptionfinal{
+ % \renewcommand{\Authornote}[2]{}
+ % \renewcommand{\Authormarginnote}[2]{}
+
+
+\newcommand{\Anote}{\Authornote{Anand}}
+%\newcommand{\Amarginnote}{\Authormarginnote{Anand}}
+%}
+
+% more macros
+
+\let\e\varepsilon
+
+%%%%%%%%%%%%%% Problems 
+\newcommand{\problemmacro}[1]{\texorpdfstring{\textsc{#1}}{#1}\xspace}
+
+\newcommand{\mla}{\problemmacro{Minimum Linear Arrangement}}
+\newcommand{\BalancedSeparator}{\problemmacro{Balanced Separator}}
+\newcommand{\UGCexpand}{\problemmacro{Expanding Unique Games}}
+\newcommand{\sparsestcut}{\problemmacro{Sparsest Cut}}
+\newcommand{\smallsetexpansion}{\problemmacro{Small Set Expansion}}
+\newcommand{\uniquegames}{\problemmacro{Unique Games}}
+
+
+
+
+% {{{ alphabet }}}
+
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cG}{\mathcal G} 
+\newcommand{\cH}{\mathcal H} 
+\newcommand{\cI}{\mathcal I} 
+\newcommand{\cJ}{\mathcal J} 
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\cW}{\mathcal W}
+\newcommand{\cX}{\mathcal X}
+\newcommand{\cY}{\mathcal Y}
+\newcommand{\cZ}{\mathcal Z}
+
+\newcommand{\bbB}{\mathbb B}
+\newcommand{\bbS}{\mathbb S}
+\newcommand{\bbR}{\mathbb R}
+\newcommand{\bbZ}{\mathbb Z}
+\newcommand{\bbI}{\mathbb I}
+\newcommand{\bbQ}{\mathbb Q}
+\newcommand{\bbP}{\mathbb P}
+\newcommand{\bbE}{\mathbb E}
+
+\newcommand{\sfE}{\mathsf E}
+
+
+% {{{ names }}}
+% Hungarian/Polish/East European names 
+\newcommand{\Erdos}{Erd\H{o}s\xspace}
+\newcommand{\Renyi}{R\'enyi\xspace}
+\newcommand{\Lovasz}{Lov\'asz\xspace}
+\newcommand{\Juhasz}{Juh\'asz\xspace}
+\newcommand{\Bollobas}{Bollob\'as\xspace}
+\newcommand{\Furedi}{F\"uredi\xspace}
+\newcommand{\Komlos}{Koml\'os\xspace}
+\newcommand{\Luczak}{\L uczak\xspace}
+\newcommand{\Kucera}{Ku\v{c}era\xspace}
+\newcommand{\Szemeredi}{Szemer\'edi\xspace}
+\newcommand{\Hastad}{H{\aa}stad\xspace}
+
+
+
+
+
+
+
+\newcommand{\etal}{et. al.}
+\newcommand{\bigO}{\mathcal{O}}
+\newcommand{\bigo}[1]{\bigO\left(#1\right)}
+\newcommand{\tbigO}{\tilde{\mathcal{O}}}
+\newcommand{\tbigo}[1]{\tbigO\left(#1\right)}
+\newcommand{\tensor}{\otimes}
+
+
+\newcommand{\argmax}{{\sf argmax}}
+\newcommand{\argmin}{{\sf argmin}}
+\newcommand{\poly}{{\sf poly}}
+\newcommand{\polylog}{{\sf polylog}}
+\newcommand{\supp}{{\sf supp}}
+
+\newcommand{\U}{\bar{u}}
+\newcommand{\V}{\bar{v}}
+\newcommand{\W}{\bar{w}}
+
+\newcommand{\rank}{{\sf rank}}
+\newcommand{\tk}{t_{1/k}} % gausssian cap
+
+\newcommand{\yes}{\textsc{Yes}\xspace}
+\newcommand{\no}{\textsc{No}\xspace}
+
+

@@ -1,0 +1,24 @@
+In addition, from my side, there is one significant question, which concerns the lower bound (Theorem 1.7). In principle, I would like to retain this theorem retained, as it is a somewhat different flavor from the lower bound in LOGT, although not explicit. However, at the moment, it is "neither here nor there", because you do not provide enough of an argument for me to readily follow, and you explicitly eschew proof, relying only on vague reference to an unrefereed (conference) paper. I had some discussion with the referee, and his leaning would be toward your just dropping it, whereas mine is toward you being clear and formal. For the latter route, you need to be clearer about the eigenvalues, explain the compactness you are relying on, and so forth...in short no "straightforward", no "omit the details".
+
+On a less significant note, the paper is poorly proof-read. I will collect a whole bunch of trivial items here that just jumped out at me as I read, but I am sure there are more; please give the paper a thorough once-over.
+Pages and lines by ACM format:
+P2L31 dash after Laplacian
+P2L33 reweighted
+P3L27 Therefore the
+P3L53,55 eigenvectors one word
+P4L3 why dash in k-directions?
+P4L9 satisfying --> satisfies
+P5L11 or 12 et
+P5L17 one of the most
+P6L30 you've italicized true-dimensionality as if it is a technical term. Do you mean that?
+P6L37 why "its"?
+P9L11 into
+P12L9 why the parentheses on the RHS?
+P18L17 what do you mean by "both" N_K,e ?
+P18L49 maybe put a comma after leaves
+
+
+Please prepare within two months a newly revised manuscript taking into account the referee reports. To submit the revised paper, please go to "Manuscripts with Decisions" in the Author Center. To facilitate the next round of refereeing, please also upload a summary of revisions, and, if appropriate, answers to referees' comments.
+
+I am looking forward to receiving your revised manuscript. Please let me know if for some reason you have difficulty meeting the two-months deadline.
+

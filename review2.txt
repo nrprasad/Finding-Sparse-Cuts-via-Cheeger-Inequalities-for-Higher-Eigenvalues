@@ -1,0 +1,81 @@
+Referee: 2
+
+Recommendation: Needs Minor Revision
+
+Comments:
+This is a very nice paper, giving clean arguments for a foundational result.  It elegantly answers a question that had been open for quite a while, showing how to generalize Cheeger's inequality to multiple eigenvalues and multiway partitioning.  I believe the result is of a high enough quality to merit acceptance.  The global structure of the writing is good, and the proofs appear correct, but it needs some editing before it is ready to appear.
+
+Here are some more specific comments:
+
+
+(1) On p.2, they write "The proof of Cheeger's inequality is algorithmic".  The first proofs were not phrased as algorithmic, although they could easily be modified to be algorithmic.  I'd probably say it can easily be made algorithmic.
+
+-- corrected as suggested. 
+
+(2) Since the paper is about Cheeger's inequality, it probably should cite Cheeger, in addition to the papers that transferred Cheeger's inequality to graphs.
+
+-- cited Cheeger's paper as suggested.
+
+(3) On p.2, they write "Closer to ours"  I'm not sure what they're contrasting it with.  (Closer than what?)  I'm also not sure the notion they talk about is really that close.  The problem they consider just wants to break the graph into k pieces, whereas the one they refer to requires these pieces to be well-connected.
+
+--  Removed Section on Sparsest k-partition from the paper.  
+
+(4) At the bottom of p.2, they say "Cheeger's inequality implies a lower bound of P", which doesn't parse.  (P is a partition.)
+
+--  Removed Section on Sparsest k-partition from the paper.  
+
+
+(5) The paragraph at the top of p.3 has a bunch of problems:
+  * It's not really clear what they're giving an example of.
+  * It's not really clear how they're arguing it.  It won't be obvious to non-specialists why cuts correspond to eigenvalue bounds and what they give.  (They have not yet defined Rayleigh quotients at this point.)
+  * All of the numbers in it are wrong.  They don't say what operator they're using the eigenvalues of, but they use the normalized Laplacian everywhere else in the paper.  The bounds they give are for the walk matrix, not the normalized Laplacian.
+
+--  Removed Section on Sparsest k-partition from the paper.  
+
+
+(6) Their capitalization, hyphenation, and typesetting conventions are not consistent--it's worth fixing them.
+
+(7) The reference under Theorem 1.2 is wrong.  It refers to Theorem 1.4, whereas it should be 1.2.
+
+-- corrected the reference.
+
+(8) On p.3, they talk about "Cheeger cuts" and "spectral projection".  Non-experts won't know what these mean.
+
+-- added a reference to the lemmas defining "cheeger cuts" and "spectral projections" 
+
+(9) They use Gaussian graphs as examples.  It would be nice if they gave finite graphs for this, or at least said a word or two about this still working with finite analogues of the Gaussian graphs.
+
+-- Added a remark about discretizing the instance.
+
+(10) On p. 4, they write "it is easy to see that Theorem 1.4 also implies an upper bound of " and state this as corollary 1.6, which they never prove.  They really should give the argument.
+
+-- the corollary has been replaced with stronger follow up work by [Louis,Makarychev-14] in  the "related work" section. 
+
+
+(11) On p.4, they write "the quantity max_i phi_G(S_i) cannot be bounded by O(\sqrt(lambda _k)polylog k in general.  We view this as further evidence suggesting that the k-sparse-cuts problem is the right generalization of sparsest cut to multiple subsets."  It's not clear what point they're making here. They write an almost identical sentence on p.18, except with a typo introduced (it's missing a lambda_k).
+
+-- The point is k-partition is not well captured by \lambda_k, whereas k sparse-cuts is. Therefore, we propose k-sparse cuts as the right generalization
+   of sparsest cut instead of asking for a k-partition. 
+   We have added a one line clarification there. 
+
+(12) They sometimes restate theorems in the same way, but with different numbers.  I find this a bit awkward.
+
+--  We have removed the restatements, and instead have informally recalled the
+lemma before the proof. 
+
+(13) On p.6,  at the beginning of the proof of Lemma 2.2, they subtract L-L'.  When doing things like this, how one handles self-loops in the diagonal, degree matrix, normalization, etc. is a bit subtle, and could be confusing to a non-expert.  A comment about how this works would probably be helpful.
+
+--  Removed Section on Sparsest k-partition from the paper.  
+
+(14) On p. 7, the condition about when you have an edge in the cut tree seems to be missing a condition that one set be a subset of the other.
+
+--  Removed Section on Sparsest k-partition from the paper.  
+
+[I stopped trying to catch editing issues starting around here.  The authors should go back and proofread.]
+
+
+
+
+Additional Questions:
+What are the major contributions of the paper?: Cheeger's inequality is one of the basic theorems of spectral graph theory.  It connects the smallest nontrivial eigenvalue of the graph Laplacian to the conductance of the sparsest cut in the graph (i.e., a partition into two pieces).  This paper shows a variety of theorems that show how to generalize this, relating bounds on multiple eigenvalues to partitions of the graph into multiple components.
+

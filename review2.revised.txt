@@ -1,0 +1,100 @@
+Referee: 2
+
+Recommendation: Needs Minor Revision
+
+Comments:
+The paper has been significantly improved since the original submission.  The proof is very nicely structured and clear.  The introductory sections can be somewhat improved:
+
+- Section 2 is presented completely isolated from the preceding and subsequent sketch of the proof. It is not clear to the reader what is the purpose of the section, until later in the detailed proof. I suppose that a short paragraph explaining the intuition would be helpful.
+- It may be a good idea adding a small subsection stating clearly nearly-linear time upper bounds for finding the partitions (actually with only 2 logs). In my experience practitioners are quite confused about spectral methods, considering them as very computationally demanding, when they are not. Because JACM a very prominent journal and the paper will be read by many, it would be very beneficial for the broader dissemination of your work to actually carefully discuss running times.
+- It is also worth devoting one paragraph to explaining the precise differences with [LOGT12]. In particular please highlight the simplicity and higher implementability of your approach.
+
+Some minor comments:
+
+Page 2 of 21:
+
+l30: the "roughly speaking" definition of the normalized Laplacian is more confusing than helpful, especially to those who do not already know what it is. I would suggest to either define it properly, or just keep the forward reference to the definition and just say it is a symmetric semi-positive matrix derived from the graph.
+
+  --fixed & included a precise definition for regular graphs
+
+l41: "robust" - why italics ?
+
+  -- fixed
+
+Page 3 of 21:
+
+l24: to practitioners --> in practice (non-theoreticians don't necessarily view themselves as practitioners)
+
+	--fixed
+
+l42: Your use of Omega(k) here and in the rest of the paper may be a bit confusing, because one can interpret it as larger than k. I think it would be nice if you clearly introduce a constant symbol (e.g. c_p<1), and use this throughout. It would be even better to actually try to pinpoint a good upper bound for c_p. This should be useful in comparing with the other higher-order Cheeger article.
+
+	-- restated the theorem with a constant \gamma \in (0,1]	
+
+l48: Why do you 'define' O() etc in the statement of the theorem? A footnote or separate comment would be better.
+
+	--fixed
+
+l50: "in polynomial time" is a weak statement, when in fact it can be done in nearly-linear time for any fixed k. The possibility of fast implementations is one of the strong points of spectral partitioning and should be highlighted. The statement of this theorem should mention the possibility or entirely drop the running time and discuss it it separately.
+
+	-- fixed the statement, and included a discussion later.
+
+l53: in the pdf I have in front of me I read "eigen vectors" rather than "eigenvectors". This appears in some other places too. Please fix if there is indeed a problem.
+
+	-- fixed the statement.
+
+Page 4 of 21:
+
+
+l7: the paragraph needs to be re-written. In particular, the last sentence refers to a "few robust properties" which have been almost been described in the few preceding lines. I would suggest to state exactly what is needed (maybe with a forward reference) and in particular highlight that only approximate eigenvectors are needed -- in the sense that their Rayleigh quotients should be 'close' to the eigenvalues, which is what allows the nearly-linear time implementations.  Then you can talk about the running time.
+
+l11: you use the term 'isotropic' which may be not clear or known to all. In general the connection to geometry is a bit lost (and should be explained more in section 2)
+
+l17: Clarify, what is epsilon here ? Also >=O() is a bit strange. Should have been Omega ?
+
+
+l24: Why polylog k and not k^(1/2) in this line?
+
+Page 5 of 21:
+
+First two paragraphs: please state clearly that these bounds are on phi(1/k).
+
+Page 6 of 21:
+
+l10: in to -> into
+
+l15-l16: be consistent, with average - averaged.
+
+l37: its -> it is
+
+Page 8 of 21:
+
+l5: V->R^n instead of V->R
+
+l14: we will have --> we have
+
+l16: delta_{ab} is undefined
+
+l19: Why use l here? Maybe use k?
+
+l40: No parentheses needed in (For technical reasons). Should be separate sentence.
+
+Page 9 of 21:
+
+"superlevel" sets -> the term is not standard
+
+Page 11 of 21:
+
+l17: One-sided -> one-sided
+
+l38: S_{ck} --> S_{c_0 k}
+
+
+
+Additional Questions:
+What are the major contributions of the paper?:
+
+Please help ACM create a more efficient time-to-publication process: Using your best judgment, what amount of copy editing do you think this paper needs?: Moderate
+
+Most ACM journal papers are researcher-oriented. Is this paper of potential interest to developers and engineers?: Maybe
+
